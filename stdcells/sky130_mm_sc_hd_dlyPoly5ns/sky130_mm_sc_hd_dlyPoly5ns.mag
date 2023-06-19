@@ -511,7 +511,6 @@ flabel pwell s 1225 -17 1259 17 0 FreeSans 160 0 0 0 VNB
 port 6 nsew ground bidirectional
 flabel locali s 40 221 74 255 7 FreeSans 160 0 0 0 in
 port 2 nsew signal input
-rlabel metal1 982 285 982 285 1 mid
 flabel pwell s 1777 -17 1811 17 0 FreeSans 160 0 0 0 VNB
 port 6 nsew ground bidirectional
 flabel metal1 s 1777 -17 1811 17 0 FreeSans 160 0 0 0 VGND

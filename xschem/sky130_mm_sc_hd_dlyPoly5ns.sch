@@ -1,4 +1,4 @@
-v {xschem version=3.1.0 file_version=1.2
+v {xschem version=3.4.0 file_version=1.2
 }
 G {}
 K {}
@@ -297,9 +297,9 @@ m=1
 value=2.10f
 footprint=1206
 device="ceramic capacitor"
-lvsignore=TRUE}
+lvs_ignore=open}
 C {sky130_fd_pr/pfet_01v8.sym} 520 -630 0 0 {name=M9
-L=1.5
+L=1.42
 W=0.8
 nf=1
 mult=1
