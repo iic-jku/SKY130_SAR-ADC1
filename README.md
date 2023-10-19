@@ -9,7 +9,7 @@ This SAR-ADC has been designed in the context of a Master's thesis, it is publis
  The proposed design is a versatile non-binary, asynchronous (= self clocked) 12 bit SAR-ADC (successive approximation register analog-to-digital converter), using a segmented 12 bit capacitive DAC with 9 bit thermometer-coded capacitor array and 3 bit binary capacitor cells. The SAR-ADC Layout has previously been added to the [IIC Mixed-Signal Circuits Submission](https://github.com/iic-jku/mpw8-submission) for the Open MPW-8 Shuttle.  
 
 ![SAR ADC block diagram](doc/img/SAR-ADC-blockdiagram.png)  
-**Figure 2**: The block diagram of the proposed 12-bit SAR-ADC. Image obtained and adapted from [1]. 
+**Figure 2**: The block diagram of the proposed 12-bit SAR-ADC. Image obtained and adapted from [2].
 
 ## Key Features 
 * Differential analog inputs.
@@ -79,5 +79,10 @@ module adc_top(
    );
 ```
 
+# Citing
+If you base your work on this design, please cite:
+
+[1] M. Moser, P. Fath, G. Zachl and H. Pretl, "An Open-Source 1.44-MS/s 703-μW 12-bit Non-Binary SAR-ADC Using 448-aF Capacitors in 130-nm CMOS," 2023 Austrochip Workshop on Microelectronics (Austrochip), Graz, Austria, 2023, pp. 2-5, doi: 10.1109/Austrochip61217.2023.10285152.
+
 # References
-[1] S. Schmickl, T. Faseth and H. Pretl, "An Untrimmed 14-bit Non-Binary SAR-ADC Using 0.37 fF-Capacitors in 180 nm for 1.1 µW at 4 kS/s," 2020 27th IEEE International Conference on Electronics, Circuits and Systems (ICECS), Glasgow, UK, 2020, pp. 1-4, doi: 10.1109/ICECS49266.2020.9294971.
+[2] S. Schmickl, T. Faseth and H. Pretl, "An Untrimmed 14-bit Non-Binary SAR-ADC Using 0.37 fF-Capacitors in 180 nm for 1.1 µW at 4 kS/s," 2020 27th IEEE International Conference on Electronics, Circuits and Systems (ICECS), Glasgow, UK, 2020, pp. 1-4, doi: 10.1109/ICECS49266.2020.9294971.
