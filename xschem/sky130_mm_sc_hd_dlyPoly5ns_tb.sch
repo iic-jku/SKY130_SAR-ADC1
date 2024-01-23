@@ -162,7 +162,7 @@ C {devices/gnd.sym} 240 -780 0 0 {name=l5 lab=GND}
 C {devices/vsource.sym} 1020 -480 0 0 {name=V2 value="0 pulse(0 1.8 15n 1p 1p 30n 60n)"}
 C {devices/gnd.sym} 1020 -440 0 0 {name=l8 lab=GND}
 C {devices/lab_wire.sym} 1490 -570 0 0 {name=l9 sig_type=std_logic lab=in}
-C {devices/code_shown.sym} 90 -720 0 0 {name=s1 only_toplevel=false value="*.include /foss/pdk/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
+C {devices/code_shown.sym} 90 -720 0 0 {name=s1 only_toplevel=false value="*.include /foss/pdks/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
 .include ../sky130_mm_sc_hd_dlyPoly5ns_postlayout.spice
 .OPTIONS RELTOL=.001 TRTOL=1 ABSTOL=1e-16 CHGTOL=1.0e-16 DEFAD=1.0e-16
 .save all

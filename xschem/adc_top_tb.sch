@@ -446,7 +446,7 @@ value="
 *.include /foss/designs/SKY130_SAR-ADC/verilog/xspice/adc_clkgen_with_edgedetect.xspice
 
 * mind the order: include AFTER XSPICE FILES
-*.include /foss/pdk/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
+*.include /foss/pdks/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
 
 
 ****************
@@ -532,7 +532,7 @@ value="
 *.include /foss/designs/SKY130_SAR-ADC/verilog/xspice/adc_clkgen_with_edgedetect.xspice
 
 * mind the order: include AFTER XSPICE FILES
-*.include /foss/pdk/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
+*.include /foss/pdks/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
 
 
 ****************

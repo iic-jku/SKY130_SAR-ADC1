@@ -1,4 +1,4 @@
-v {xschem version=3.1.0 file_version=1.2
+v {xschem version=3.4.5 file_version=1.2
 }
 G {}
 K {}
@@ -69,7 +69,7 @@ lab=phi2_n}
 N 590 -210 610 -210 {
 lab=phi2_n}
 C {devices/code_shown.sym} 170 -680 0 0 {name=SPICE only_toplevel=false value=".options reltol=1e-3 vabstol=1e-6 iabstol=1e-12
-.include /foss/pdk/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
+.include /foss/pdks/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
 .tran 0.1n 36n
 .save all
 .control
