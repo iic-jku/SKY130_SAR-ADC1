@@ -1,4 +1,4 @@
-v {xschem version=3.1.0 file_version=1.2
+v {xschem version=3.4.5 file_version=1.2
 }
 G {}
 K {}
@@ -510,7 +510,7 @@ simulator=xyce
 only_toplevel=false 
 value="
 * xyce commands
-.include ../../spice/adc_top.gds.C.noD.merge.postlayout.spice
+.include /foss/designs/SKY130_SAR-ADC1/spice/adc_top.gds.C.noD.merge.postlayout.spice
 
 ****************
 * Misc
@@ -584,7 +584,7 @@ simulator=ngspice
 only_toplevel=false 
 value="
 * ngspice commands
-.include ../../spice/adc_top.gds.C.postlayout.spice
+.include /foss/designs/SKY130_SAR-ADC1/spice/adc_top.gds.C.noD.merge.postlayout.spice
 .include /foss/pdks/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
 
 ****************
