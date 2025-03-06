@@ -1,50 +1,54 @@
-## Config byte 1:  
-* Bit 0..2   : Average control of the LSB bits
-  * `default`: 1 sample
-  * `001`:     3 samples
-  * `010`:     7 samples
-  * `011`:     15 samples
-  * `100`:     31 samples
-* Bit 3..5   : OSR Control
-  * `default`: 1 sample
-  * `001`:     4 samples
-  * `010`:     16 samples
-  * `011`:     64 samples
-  * `100`:     256 samples  
-* Bit 6 : Row decoder mode
-  * `0`: progress down-to-up
-  * `1`: progress middle-to-side
-* Bit 7 : Column decoder mode
-  * `0`: progress side-to-side (even: L to R, odd: R to L)
-  * `1`: progress middle-to-side
-* Bit 8..9 : unused
-* Bit 10..15 : delay edge detect  
-  * `Bit 0` : +  5ns Delay
-  * `Bit 1` : + 10ns Delay
-  * `Bit 2` : + 20ns Delay
-  * `Bit 3` : + 40ns Delay
-  * `Bit 4` : + 80ns Delay
-  * `Bit 4` : +160ns Delay
+# SAR-ADC Mode Configuration
 
-## Config byte 2:  
-* Bit 0..4   : delay1  
-  * `Bit 0` : + 5ns Delay
-  * `Bit 1` : +10ns Delay
-  * `Bit 2` : +20ns Delay
-  * `Bit 3` : +40ns Delay
-  * `Bit 4` : +80ns Delay
-* Bit 5..9   : delay2  
-  * `Bit 0` : + 5ns Delay
-  * `Bit 1` : +10ns Delay
-  * `Bit 2` : +20ns Delay
-  * `Bit 3` : +40ns Delay
-  * `Bit 4` : +80ns Delay
-* Bit 10..14 : delay3  
-  * `Bit 0` : + 5ns Delay
-  * `Bit 1` : +10ns Delay
-  * `Bit 2` : +20ns Delay
-  * `Bit 3` : +40ns Delay
-  * `Bit 4` : +80ns Delay
-* Bit 15     : enable delay control  
-  * 0 .. bypassing disabled, all delays have the max. value  
-  * 1 .. enable delay-configuration
+## Configuration register 1
+
+* Bits **[2:0]**: Averaging control of the LSB bits (to lower comparator noise)
+  * `000`: 1 sample (default)
+  * `001`: 3 samples
+  * `010`: 7 samples
+  * `011`: 15 samples
+  * `100`: 31 samples
+* Bits **[5:3]**: Oversampling ratio (OSR) control
+  * `000`: 1 sample (default)
+  * `001`: 4 samples
+  * `010`: 16 samples
+  * `011`: 64 samples
+  * `100`: 256 samples  
+* Bit **[6]**: Row-decoder mode
+  * `0`: Progress down-to-up (default)
+  * `1`: Progress middle-to-side
+* Bit **[7]**: Column-decoder mode
+  * `0`: Progress side-to-side (even: L-to-R, odd: R-to-L; default)
+  * `1`: Progress middle-to-side
+* Bits **[9:8]**: Unused
+* Bits **[15:10]**: Delay control of conversion start edge detection (set `REG2[15]=1`)
+  * Bit **[10]**: +5ns delay
+  * Bit **[11]**: + 10ns delay
+  * Bit **[12]**: +20ns delay
+  * Bit **[13]**: +40ns delay
+  * Bit **[14]**: +80ns delay
+  * Bit **[15]**: +160ns delay
+
+## Configuration register 2
+
+* Bits **[4:0]**: Delay block 1 (set `REG2[15]=1`)
+  * Bit **[0]**: + 5ns delay
+  * Bit **[1]**: +10ns delay
+  * Bit **[2]**: +20ns delay
+  * Bit **[3]**: +40ns delay
+  * Bit **[4]**: +80ns delay
+* Bits **[9:5]**: Delay block 2 (set `REG2[15]=1`)
+  * Bit **[5]**: + 5ns delay
+  * Bit **[6]**: +10ns delay
+  * Bit **[7]**: +20ns delay
+  * Bit **[8]**: +40ns delay
+  * Bit **[9]**: +80ns delay
+* Bits **[14:10]**: Delay block 3 (set `REG2[15]=1`)
+  * Bit **[10]**: +5ns delay
+  * Bit **[11]**: +10ns delay
+  * Bit **[12]**: +20ns delay
+  * Bit **[13]**: +40ns delay
+  * Bit **[14]**: +80ns delay
+* Bit **[15]**: Enable manual delay control
+  * `0`: Manual control disabled, all delays set to max. value (default)
+  * `1`: Enable manual delay-configuration
