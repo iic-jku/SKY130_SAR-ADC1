@@ -1,6 +1,6 @@
 # SAR-ADC Mode Configuration
 
-## Configuration register 1
+## Configuration register `ADC_CFG1`
 
 * Bits **[2:0]**: Averaging control of the LSB bits (to lower comparator noise)
   * `000`: 1 sample (default)
@@ -21,7 +21,7 @@
   * `0`: Progress side-to-side (even: L-to-R, odd: R-to-L; default)
   * `1`: Progress middle-to-side
 * Bits **[9:8]**: Unused
-* Bits **[15:10]**: Delay control of conversion start edge detection (set `REG2[15]=1`)
+* Bits **[15:10]**: Delay control of conversion start edge detection (set `ADC_CFG2[15]=1`)
   * Bit **[10]**: +5ns delay
   * Bit **[11]**: + 10ns delay
   * Bit **[12]**: +20ns delay
@@ -29,21 +29,21 @@
   * Bit **[14]**: +80ns delay
   * Bit **[15]**: +160ns delay
 
-## Configuration register 2
+## Configuration register `ADC_CFG2`
 
-* Bits **[4:0]**: Delay block 1 (set `REG2[15]=1`)
+* Bits **[4:0]**: Delay block 1 (set `ADC_CFG2[15]=1`)
   * Bit **[0]**: + 5ns delay
   * Bit **[1]**: +10ns delay
   * Bit **[2]**: +20ns delay
   * Bit **[3]**: +40ns delay
   * Bit **[4]**: +80ns delay
-* Bits **[9:5]**: Delay block 2 (set `REG2[15]=1`)
+* Bits **[9:5]**: Delay block 2 (set `ADC_CFG2[15]=1`)
   * Bit **[5]**: + 5ns delay
   * Bit **[6]**: +10ns delay
   * Bit **[7]**: +20ns delay
   * Bit **[8]**: +40ns delay
   * Bit **[9]**: +80ns delay
-* Bits **[14:10]**: Delay block 3 (set `REG2[15]=1`)
+* Bits **[14:10]**: Delay block 3 (set `ADC_CFG2[15]=1`)
   * Bit **[10]**: +5ns delay
   * Bit **[11]**: +10ns delay
   * Bit **[12]**: +20ns delay
